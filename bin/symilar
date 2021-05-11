@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/madhubandru/Drexel Academics/Term 4/INFO624-003-Informationretrievalsystem/Project/Kaggle books db/flask_app/env/bin/python3.7" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pylint import run_symilar
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(run_symilar())

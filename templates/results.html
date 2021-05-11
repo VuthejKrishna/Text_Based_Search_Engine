@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Bookmarks Search</title>
+
+  </head>
+  <body>
+
+  <div class="s01">
+    <form action="/search/results" method="post">
+      <fieldset>
+        <h1 style="color: white; font-size: 54px;">In Pursuit of Books</h1>
+      </fieldset>
+      <div class="inner-form">
+        <div class="input-field first-wrap">
+          <input id="search" type="text" name="input" placeholder="What are you looking for?" />
+        </div>         
+        <div class="input-field third-wrap">
+          <button class="btn-search" type="submit">Search</button>
+        </div>
+      </div>
+      <center>
+        <h2 style="color:white;">{{ res[1] }}</h2>
+      </center>
+      <table class="table" style="color:black; background-color:white;">
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Chapter</th>
+            <th>Similarity</th>
+          </tr>
+        </thead>
+    
+      {% for hit in res[0].values() %}
+        <tbody>
+          <tr>
+            <td scope="row">{{ hit['bookname'] }}</td>
+              <td>{{ hit['author'] }}</td>
+              <td>{{ hit['chapter'] }}</td>
+              <td>{{ hit['similarity'] }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+      </table>
+      <footer class="footer" style="color: blanchedalmond;">
+        <p>&copy; 2020 Madhu Vuthej Spandana</p>
+      </footer>
+    </form>
+  </div>
+  </body>
+</html>
