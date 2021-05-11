@@ -1,128 +1,54 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red27\green31\blue34;\red255\green255\blue255;}
-{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;\cssrgb\c100000\c100000\c100000;}
-\margl1440\margr1440\vieww28600\viewh15500\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# Text-based-search-engine
+This project repository include below files/folders.
 
-\f0\b\fs64 \cf2 \cb3 \expnd0\expndtw0\kerning0
-Text-based-search-engine\cb1 \
-\pard\pardeftab720\partightenfactor0
+1.file4.csv : This is the data file, where we have cleaned data. It consist of 50 records with below fileds.
 
-\f1\b0\fs32 \cf2 \cb3 This project repository include below files/folders.\
-\cb1 \
-\pard\pardeftab720\partightenfactor0
+  1. book_id
+  2. bookname
+  3.author_id
+  4. chapter
+  5. text
 
-\f0\b \cf2 \cb3 1.file4.csv :
-\f1\b0  This is the data file, where we have cleaned data. It consist of 50 records with below fileds.\cb1 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 1. book_id\cb1 \
-\cb3 2. bookname\cb1 \
-\cb3 3.author_id\cb1 \
-\cb3 4. chapter\cb1 \
-\cb3 5. text\
-\cb1 \
-\pard\pardeftab720\partightenfactor0
+2. templates folder : This is the templates folder with UI screen designs both for search and results screens.
 
-\f0\b \cf2 \cb3 2. templates folder :
-\f1\b0  This is the templates folder with UI screen designs both for search and results screens.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+3. static folder : This folder consist of UI style/design CSS file and also background image used in UI.
 
-\f0\b \cf2 \cb3 3. static folder :
-\f1\b0  This folder consist of UI style/design CSS file and also background image used in UI.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+4. lib folder : This folder is required for running the application.
 
-\f0\b \cf2 \cb3 4. lib folder :
-\f1\b0  This folder is required for running the application.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+5. bin folder : This folder is required for running the application.
 
-\f0\b \cf2 \cb3 5. bin folder :
-\f1\b0  This folder is required for running the application.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+6. stemmer folder : This folder consists of stemming related packages.
 
-\f0\b \cf2 \cb3 6. stemmer folder :
-\f1\b0  This folder consists of stemming related packages.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+7. tokenizers folder : This folder consists of packages related to word tokenizer.
 
-\f0\b \cf2 \cb3 7. tokenizers folder :
-\f1\b0  This folder consists of packages related to word tokenizer.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+8. app.py : This file is the key driving file of the application. To launch the application locally this file need to be triggered.
 
-\f0\b \cf2 \cb3 8. app.py :
-\f1\b0  This file is the key driving file of the application. To launch the application locally this file need to be triggered.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+9. load_file.py : Loading dataset(file4.csv) is done using thsi file.
 
-\f0\b \cf2 \cb3 9. load_file.py :
-\f1\b0  Loading dataset(file4.csv) is done using thsi file.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+10. build_df.py : This pyhton file is used to generate the dictionary with document frequency(DF) of the input file.
 
-\f0\b \cf2 \cb3 10. build_df.py :
-\f1\b0  This pyhton file is used to generate the dictionary with document frequency(DF) of the input file.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+11. cosine_similarity.py : This pyhton file is used to process a input query provided by user and provide the results that matching the query.
 
-\f0\b \cf2 \cb3 11. cosine_similarity.py :
-\f1\b0  This pyhton file is used to process a input query provided by user and provide the results that matching the query.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+12. preprocess_data.py : This python file is used to process both input data file and input provided by user query. Following functions are included in this file.
 
-\f0\b \cf2 \cb3 12. preprocess_data.py :
-\f1\b0  This python file is used to process both input data file and input provided by user query. Following functions are included in this file.\cb1 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 1.lower case conversion\cb1 \
-\cb3 2.stop words removal\cb1 \
-\cb3 3.removing punctuations\cb1 \
-\cb3 4.stemming\cb1 \
-\cb3 5.number to word conversion\
-\cb1 \
-\pard\pardeftab720\partightenfactor0
+  1.lower case conversion
+  2.stop words removal
+  3.removing punctuations
+  4.stemming
+  5.number to word conversion
 
-\f0\b \cf2 \cb3 13. tf_idf.py :
-\f1\b0  This python file is used to calculate tf-idf scores.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+13. tf_idf.py : This python file is used to calculate tf-idf scores.
 
-\f0\b \cf2 \cb3 14. Procfile :
-\f1\b0  This file is required for hosting the application in web.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+14. Procfile : This file is required for hosting the application in web.
 
-\f0\b \cf2 \cb3 15. pyvenv.cfg:
-\f1\b0  This is system generated file when application is created in flask.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb1 \
-\pard\pardeftab720\partightenfactor0
+15. pyvenv.cfg: This is system generated file when application is created in flask.
 
-\f0\b \cf2 \cb3 16. requirements.txt :
-\f1\b0  This file consist of all required python packages which will be auto installed when application is launched.\
-\
-To run the application in local machine, open this complete folder in any IDE suggestable Visual Studio.\
-\
-## activate environment\
->> source bin/activate\
-\
-## Launch app\
->> python app.py}
+16. requirements.txt : This file consist of all required python packages which will be auto installed when application is launched.
+
+To run the application in local machine, open this complete folder in any IDE suggestable Visual Studio.
+
+## activate environment
+>> source bin/activate
+
+## Launch app
+>> python app.py
